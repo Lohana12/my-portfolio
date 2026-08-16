@@ -74,10 +74,10 @@ export default function Home() {
       {/* Hero */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-40">
         <img
-          src="/profile.jpg"
-          alt="Profile"
-          className="w-52 h-52 rounded-full border-4 border-purple-500 object-cover shadow-[0_0_80px_rgba(168,85,247,.6)]"
-        />
+  src="/profile.jpg"
+  alt="Profile"
+  className="w-52 h-52 rounded-full border-4 border-purple-500 object-cover"
+/>
 
         <h1 className="text-5xl md:text-7xl font-bold mt-8">
           Lohana Mendu
