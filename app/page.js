@@ -166,11 +166,13 @@ export default function Home() {
           </div>
 
           <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:scale-105 transition">
-           <img
-  src="/NoteGPT.jpg"
+           
+  <img
+  src="/notegpt.jpg"
   alt="NoteGPT"
   className="w-full h-52 object-cover rounded-t-3xl"
-      />
+/>
+    
             <div className="p-6">
               <h3 className="text-xl font-semibold">NoteGPT</h3>
               <p className="text-gray-400 mt-3">
