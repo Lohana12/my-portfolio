@@ -21,6 +21,7 @@ import { SiMysql, SiTensorflow } from "react-icons/si";
 export default function Home() {
   const text = "Data Science Student";
   const [typed, setTyped] = useState("");
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -107,11 +108,19 @@ export default function Home() {
         </div>
 
         <div className="flex gap-6 mt-10 text-3xl text-gray-400">
-          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">
+          <a
+  href="https://github.com/lohana12"
+  target="_blank"
+  rel="noopener noreferrer"
+>
             <FaGithub className="hover:text-white" />
           </a>
 
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer">
+          <a
+  href="https://www.linkedin.com/in/lohana-mendu-763b9032b"
+  target="_blank"
+  rel="noopener noreferrer"
+>
             <FaLinkedin className="hover:text-blue-400" />
           </a>
 
@@ -225,81 +234,121 @@ export default function Home() {
       </section>
 
       {/* Certificates */}
-      <section id="certificates" data-aos="fade-up" className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-bold mb-10">Certificates</h2>
+<section
+  id="certificates"
+  data-aos="fade-up"
+  className="max-w-6xl mx-auto px-6 py-24"
+>
+  <h2 className="text-4xl font-bold mb-10">Certificates</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+  <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition">
-  <img
-    src="/deloitte-certificate.jpg"
-    alt="Deloitte Internship Certificate"
-    className="w-full h-52 object-cover"
-  />
-  <div className="p-6">
-    <h3 className="text-xl font-bold">Deloitte Internship</h3>
-    <p className="text-gray-400 mt-2">
-      Internship and Data Analytics Job Simulation.
-    </p>
-  </div>
-</div>
+    {[
+      {
+        title: "Deloitte Internship",
+        desc: "Internship and Data Analytics Job Simulation.",
+        image: "/deloitte-certificate.jpg",
+      },
+      {
+        title: "Power BI",
+        desc: "Dashboard creation and data visualization.",
+        image: "/powerbi-certificate.jpg",
+      },
+      {
+        title: "Forage: Data Visualization",
+        desc: "Empowering Business with Effective Insights.",
+        image: "/forage-data-visualization.jpg",
+      },
+    ].map((cert) => (
+      <div
+        key={cert.title}
+        onClick={() => setSelectedCertificate(cert.image)}
+        className="cursor-pointer bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition duration-300"
+      >
+        <img
+          src={cert.image}
+          alt={cert.title}
+          className="w-full h-52 object-cover"
+        />
 
-<div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition">
-  <img
-    src="/powerbi-certificate.jpg"
-    alt="Power BI Certificate"
-    className="w-full h-52 object-cover"
-  />
-  <div className="p-6">
-    <h3 className="text-xl font-bold">Power BI</h3>
-    <p className="text-gray-400 mt-2">
-      Dashboard creation and data visualization.
-    </p>
-  </div>
-</div>
-
-<div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition">
-  <img
-    src="/forage-data-visualization.jpg"
-    alt="Forage Data Visualization Certificate"
-    className="w-full h-52 object-cover"
-  />
-  <div className="p-6">
-    <h3 className="text-xl font-bold">Forage: Data Visualization</h3>
-    <p className="text-gray-400 mt-2">
-      Empowering Business with Effective Insights.
-    </p>
-  </div>
-</div>
+        <div className="p-6">
+          <h3 className="text-xl font-bold">{cert.title}</h3>
+          <p className="text-gray-400 mt-2">{cert.desc}</p>
         </div>
-      </section>
+      </div>
+    ))}
+
+  </div>
+</section>
 
       {/* Contact */}
-      <section id="contact" data-aos="fade-up" className="text-center px-6 py-24">
-        <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
+<section
+  id="contact"
+  data-aos="fade-up"
+  className="text-center px-6 py-24"
+>
+  <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
 
-        <p className="text-gray-400 mb-10">
-          Ready to collaborate on exciting projects.
-        </p>
+  <p className="text-gray-400 mb-10">
+    Ready to collaborate on exciting projects.
+  </p>
 
-        <div className="flex justify-center gap-5 flex-wrap">
-          <a href="mailto:mendulohana2006@gmail.com" className="bg-purple-600 px-7 py-3 rounded-full hover:scale-105 transition">
-            Email
-          </a>
+  <div className="flex justify-center gap-5 flex-wrap">
+    <a
+      href="mailto:mendulohana2006@gmail.com"
+      className="bg-purple-600 px-7 py-3 rounded-full hover:scale-105 transition"
+    >
+      Email
+    </a>
 
-          <a href="https://github.com/lohana12" target="_blank" rel="noopener noreferrer" className="border border-white px-7 py-3 rounded-full hover:bg-white hover:text-black transition">
-            GitHub
-          </a>
+    <a
+      href="https://github.com/lohana12"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border border-white px-7 py-3 rounded-full hover:bg-white hover:text-black transition"
+    >
+      GitHub
+    </a>
 
-          <a href="https://linkedin.com/in/https://www.linkedin.com/in/lohana-mendu-763b9032b" target="_blank" rel="noopener noreferrer" className="border border-white px-7 py-3 rounded-full hover:bg-white hover:text-black transition">
-            LinkedIn
-          </a>
-        </div>
-      </section>
+    <a
+      href="https://www.linkedin.com/in/lohana-mendu-763b9032b"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border border-white px-7 py-3 rounded-full hover:bg-white hover:text-black transition"
+    >
+      LinkedIn
+    </a>
+  </div>
+</section>
 
-      <footer className="border-t border-white/10 py-8 text-center text-gray-400">
-        © 2026 Lohana Mendu. All rights reserved.
-      </footer>
+<footer className="border-t border-white/10 py-8 text-center text-gray-400">
+  © 2026 Lohana Mendu. All rights reserved.
+</footer>
+{/* Certificate Popup */}
+{selectedCertificate && (
+  <div
+    onClick={() => setSelectedCertificate(null)}
+    className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-6"
+  >
+    <div
+      className="relative max-w-4xl w-full"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        onClick={() => setSelectedCertificate(null)}
+        className="absolute -top-12 right-0 text-white text-4xl hover:text-purple-400"
+      >
+        ×
+      </button>
+
+      <img
+        src={selectedCertificate}
+        alt="Certificate"
+        className="w-full rounded-2xl shadow-[0_0_40px_rgba(168,85,247,0.5)]"
+      />
+    </div>
+  </div>
+)}
 
     </main>
   );
