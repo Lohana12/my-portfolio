@@ -230,24 +230,47 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-purple-500 hover:-translate-y-2 transition">
-            <div className="text-5xl mb-4">🏆</div>
-            <h3 className="text-xl font-bold">Microsoft Internship</h3>
-            <p className="text-gray-400 mt-2">Internship and career learning experience.</p>
-          </div>
+          <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition">
+  <img
+    src="/deloitte-certificate.jpg"
+    alt="Deloitte Internship Certificate"
+    className="w-full h-52 object-cover"
+  />
+  <div className="p-6">
+    <h3 className="text-xl font-bold">Deloitte Internship</h3>
+    <p className="text-gray-400 mt-2">
+      Internship and Data Analytics Job Simulation.
+    </p>
+  </div>
+</div>
 
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-purple-500 hover:-translate-y-2 transition">
-            <div className="text-5xl mb-4">📊</div>
-            <h3 className="text-xl font-bold">Power BI</h3>
-            <p className="text-gray-400 mt-2">Dashboard creation and data visualization.</p>
-          </div>
+<div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition">
+  <img
+    src="/powerbi-certificate.jpg"
+    alt="Power BI Certificate"
+    className="w-full h-52 object-cover"
+  />
+  <div className="p-6">
+    <h3 className="text-xl font-bold">Power BI</h3>
+    <p className="text-gray-400 mt-2">
+      Dashboard creation and data visualization.
+    </p>
+  </div>
+</div>
 
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-purple-500 hover:-translate-y-2 transition">
-            <div className="text-5xl mb-4">🤖</div>
-            <h3 className="text-xl font-bold">Machine Learning</h3>
-            <p className="text-gray-400 mt-2">AI and predictive model fundamentals.</p>
-          </div>
-
+<div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500 hover:-translate-y-2 transition">
+  <img
+    src="/forage-data-visualization.jpg"
+    alt="Forage Data Visualization Certificate"
+    className="w-full h-52 object-cover"
+  />
+  <div className="p-6">
+    <h3 className="text-xl font-bold">Forage: Data Visualization</h3>
+    <p className="text-gray-400 mt-2">
+      Empowering Business with Effective Insights.
+    </p>
+  </div>
+</div>
         </div>
       </section>
 
